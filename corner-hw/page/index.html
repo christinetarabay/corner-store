@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div><span>SHOP</span> <span>ABOUT</span></div>
+        <img class="icons" src="images\shop.png">
+        <div class="lastimg"><img class="icons" src="images\shopping-cart.png"> <img class="icons"
+                src="images\user.png"></div>
+
+    </header>
+    <section class="first">
+        <div class="left-btn btn">left</div>
+        <h1> stripy and jigjaw strap pillow and duvet set</h1>
+        <a href="#">View product</a>
+        <img class="auto" src="images\try.jpg" alt="" />
+        <div class="right-btn btn">right</div>
+
+    </section>
+
+    <section class="second">
+       
+        <diV class="flex flex-row place-content-between">
+            <div class="p-10 text-s  font-sans	">STORE</div>
+        
+            <i class="fas fa-search p-6"></i>
+        </diV>
+        <div id="store-search" class="hidden flex gap-2 right-10 top-10  justify-end">
+            <label for="price-limit">Price Limit:</label>
+            <input type="number" name="price-limit" id="price-limit" />
+            <label for="text-input">Text:</label>
+            <input class="border-black border-1" type="text" id="text-input" />
+            <p id="store-search-close">click to close</p>
+          </div>
+        
+        <div class="containerone ">
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>shirt</p>  <i class="fas fa-heart"></i>
+                </div>
+                <p>50$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>product</p>       <i class="fas fa-heart"></i>
+                </div>
+                <p>50$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>camera</p>       <i class="fas fa-heart"></i>
+                </div>
+                <p>50$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>product</p>       <i class="fas fa-heart"></i>
+                </div>
+                <p>50$</p>
+
+            </div>
+        </div>
+        <div class="containertwo">
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>mug</p>       <i class="fas fa-heart"></i>
+                </div>
+                <p>20$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>phone</p><i class="fas fa-heart"></i>
+                </div>
+                <p>30$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                    <p>ball</p>       <i class="fas fa-heart"></i>
+                </div>
+                <p>50$</p>
+
+            </div>
+            <div class="card shadow-md">
+                <img class="bg-gray-200 h-60 " src="images\download.png">
+                <div class="flex flex-row w-full place-content-between ">
+                  <p>product</p>      <i class="fas fa-heart"></i>  <!-- fa-heart howi class iza bdi 7tla shi-->
+                </div>
+                <p>$50</p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="third-sec" >
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatibus modi consequatur repudiandae fuga
+            minus natus perspiciatis.
+            Sapiente laborum magni, repellat doloribus ipsam provident perspiciatis iste nostrum earum minus a!</p><br>
+
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>About</h2>
+        <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi error nulla voluptatem, quibusdam
+            amet ipsa quos aperiam
+            molestias repudiandae eos! Nam magnam, et voluptatem eligendi dicta velit blanditiis porro atque!</p>
+    </section>
+
+    <script>
+        let imageSources = ['images/try.jpg', 'images/image1.jpg', 'images/image2.jpg', 'images/bed1.jpg'];
+
+        let imgIndex = 0;
+
+        updateUI();
+
+        function moveRight() {
+            imgIndex = imgIndex + 1;
+            if (imgIndex > imageSources.length - 1) {
+                imgIndex = 0;
+            }
+            updateUI();
+        }
+
+        function moveLeft() {
+            imgIndex = imgIndex - 1;
+            if (imgIndex < 0) {
+                imgIndex = imageSources.length - 1;
+            }
+            updateUI();
+        }
+
+        function updateUI() {
+            document.querySelector('.first img').src = imageSources[imgIndex];
+        }
+
+        let leftBtn = document.querySelector('.left-btn');
+        leftBtn.addEventListener('click', moveLeft);
+
+        let rightBtn = document.querySelector('.right-btn');
+        rightBtn.addEventListener('click', moveRight);
+
+
+// managing likes lyseer a7mar l3nd hearts.foreach.....;
+const hearts = document.querySelectorAll('.fa-heart');
+      function addEventHandler(htmlElement) {
+        htmlElement.addEventListener('click', function () {
+          htmlElement.classList.toggle('red');
+        });
+      }
+      hearts.forEach(addEventHandler);
+//     // // / /////////////////////////////////////////////////////////////////////
+ // store search hide show
+      // get search element
+     let storeSearch = document.querySelector('#store-search'); 
+    //  7tyt var esmo storesearch wl jowa bedal 3al div lfaw2 lfeya input texts 
+    
+      function showSearch() {
+       storeSearch.classList.remove('hidden'); // kna 7tyno hidden lal #store-search bhl func batl bontr l3ytla
+      }
+       // get search icon
+    //  1st way 3ytla   let searchIcon = document.querySelector('.fa-search');
+    //   searchIcon.addEventListener('click', showSearch);
+      document.querySelector('.fa-search').addEventListener('click',showSearch); //3ytna lal function show bas eekbs search
+
+     //function kermal bas ekbs close yrj3o hidden
+      function hideSearch() {
+        storeSearch.classList.add('hidden');
+      }
+
+    // 1st way  let closeSearchIcon = document.querySelector('#store-search-close'); 
+    //   closeSearchIcon.addEventListener('click', hideSearch);
+    document.querySelector(' #store-search-close').addEventListener('click',hideSearch);
+
+      function filterStoreItems() {
+        let searchValue = searchInput.value;
+        let maxPrice = priceLimitElement.value;
+        if (isNaN(maxPrice)) {
+          maxPrice = 0;
+        }
+
+
+// loop over all cards
+cards.forEach(function (element) {
+          const cardInnerText = element.innerText;
+          const cardInnerTextParts = cardInnerText.split('$');
+          const cardPrice =parseFloat(cardInnerTextParts[1]);
+          // above is equivalent to const cardPrice = element.innerText.split('$')[1]
+
+          // either add or remove class hidden
+          // if card text content matches search value, remove class hidden
+          // hide the ones that are not matching search
+          // & show the matching ones
+          if (element.innerText.toLowerCase().includes(searchValue.toLowerCase()) && (0 == maxPrice || cardPrice < maxPrice)) {
+            console.log('entered block to show card', cardPrice, maxPrice);
+            element.classList.remove('hidden');
+          } else {
+            element.classList.add('hidden');
+          }
+        });
+    }
+      const cards = document.querySelectorAll('.card');
+      // store search filtering
+      let searchInput = document.querySelector('#store-search input[type=text]');
+      searchInput.addEventListener('input', filterStoreItems);
+      // get reference of the price limit input
+      const priceLimitElement = document.querySelector('#price-limit');
+      priceLimitElement.addEventListener('change', filterStoreItems);
+
+
+
+ 
+
+    </script>
+
+</body>
+
+</html>
